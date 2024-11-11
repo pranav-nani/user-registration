@@ -12,7 +12,7 @@ function App() {
 
   const fetchUsers = async () => {
     try {
-      const response = await axios.get('/api/users');
+      const response = await axios.get('https://user-registration-4tvn.vercel.app/api/users');
       setUsers(response.data);
     } catch (error) {
       console.error("Error fetching users:", error);
@@ -21,7 +21,7 @@ function App() {
 
   const addUser = async (user) => {
     try {
-      await axios.post('/api/users', user);
+      await axios.post('https://user-registration-4tvn.vercel.app/api/users', user);
       fetchUsers();
       setEditingUser(null); // Reset the editing user state after adding a new user
     } catch (error) {
@@ -31,7 +31,7 @@ function App() {
 
   const updateUser = async (user) => {
     try {
-      await axios.put(`/api/users/${user.id}`, user); // Make sure `user.id` is available
+      await axios.put(`https://user-registration-4tvn.vercel.app/api/users/${user.id}`, user); // Make sure `user.id` is available
       fetchUsers();
       setEditingUser(null); // Reset the editing user state after updating
     } catch (error) {
@@ -45,7 +45,7 @@ function App() {
 
   const handleDelete = async (id) => {
     try {
-      await axios.delete(`/api/users/${id}`);
+      await axios.delete(`https://user-registration-4tvn.vercel.app/api/users/${id}`);
       fetchUsers();
     } catch (error) {
       console.error("Error deleting user:", error);

@@ -16,7 +16,7 @@ let users = [
 app.get('/',(req,res)=>{
     res.send("223");
 })
-
+    
 // Fetch all users
 app.get('/api/users', (req, res) => {
     res.json(users);
