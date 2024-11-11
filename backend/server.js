@@ -4,9 +4,7 @@ const bodyParser = require('body-parser');
 const app = express();
 const port = process.env.PORT || 5000;
 
-app.get('/',(req,res)=>{
-    res.send("223");
-})
+
 app.use(cors());
 app.use(bodyParser.json());
 
@@ -14,6 +12,10 @@ let users = [
     { id: 1, name: 'John Doe', email: 'john@example.com', dob: '1990-01-01' },
     { id: 2, name: 'Jane Smith', email: 'jane@example.com', dob: '1985-02-15' }
 ];
+
+app.get('/',(req,res)=>{
+    res.send("223");
+})
 
 // Fetch all users
 app.get('/api/users', (req, res) => {
