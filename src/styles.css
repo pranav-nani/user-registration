@@ -1,0 +1,140 @@
+/* styles.css */
+
+/* General reset */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: Arial, sans-serif;
+}
+
+/* Main container */
+.container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  min-height: 100vh;
+  background-color: #f4f4f9;
+}
+
+/* Card layout */
+.card {
+  display: flex;
+  width: 80%;
+  max-width: 1000px;
+  background: #ffffff;
+  border-radius: 10px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+  overflow: hidden;
+  padding: 20px;
+}
+
+/* Left side: User form */
+.user-form-container {
+  width: 40%;
+  padding: 20px;
+  border-right: 2px solid #eeeeee;
+}
+
+.user-form-container h1 {
+  font-size: 24px;
+  color: #333;
+  margin-bottom: 20px;
+}
+
+form input {
+  width: 100%;
+  padding: 10px;
+  margin: 10px 0;
+  border: 1px solid #ddd;
+  border-radius: 5px;
+}
+
+form button {
+  width: 100%;
+  padding: 10px;
+  margin-top: 10px;
+  background-color: #4caf50;
+  color: white;
+  font-size: 16px;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+}
+
+form button:hover {
+  background-color: #45a049;
+}
+
+/* Right side: Users list */
+.user-list-container {
+  width: 60%;
+  padding: 20px;
+}
+
+.user-list-container h2 {
+  font-size: 22px;
+  color: #333;
+  margin-bottom: 15px;
+}
+
+.user-list-container ul {
+  list-style: none;
+  padding: 0;
+}
+
+.user-list-container li {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 10px;
+  margin-bottom: 10px;
+  background: #f9f9f9;
+  border-radius: 5px;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+.user-list-container button {
+  margin-left: 10px;
+  padding: 5px 10px;
+  background-color: #007bff;
+  color: white;
+  font-size: 14px;
+  border: none;
+  border-radius: 3px;
+  cursor: pointer;
+}
+
+.user-list-container button:hover {
+  background-color: #0056b3;
+}
+
+.user-list-container button.delete {
+  background-color: #e74c3c;
+}
+
+.user-list-container button.delete:hover {
+  background-color: #c0392b;
+}
+
+.user-data-contianer {
+  padding-bottom: 20px;
+  width: auto;
+}
+.user-data {
+  padding-bottom: 16px;
+  width: auto;
+}
+
+.user-data ul {
+  list-style: none;
+  padding: 0;
+}
+
+.user-data ul li {
+  color: black;
+  font-size: 16px;
+  margin: 3px 0;
+  box-shadow: none;
+  font-weight: 500;
+}

@@ -1,7 +1,8 @@
 import React, { useState, useEffect } from 'react';
 import axios from 'axios';
 import UserForm from './UserForm';
-
+import './styles.css';
+import UserList from './UserList';
 function App() {
   const [users, setUsers] = useState([]);
   const [editingUser, setEditingUser] = useState(null); // New state to store user being edited
@@ -53,21 +54,19 @@ function App() {
   };
 
   return (
-    <div>
-      <h1>User Registration</h1>
-      <UserForm user={editingUser} onSubmit={editingUser ? updateUser : addUser} />
-      <h2>Users List</h2>
-      <ul>
-        {users && users.map(user => (
-          <li key={user.id}>
-            {user.name} ({user.email})
-            <button onClick={() => handleEdit(user)}>Edit</button>
-            <button onClick={() => handleDelete(user.id)}>Delete</button>
-          </li>
-        ))}
-      </ul>
+    <div className="container">
+      <div className="card">
+        <div className="user-form-container">
+          <h1>User Registration</h1>
+          <UserForm user={editingUser} onSubmit={editingUser ? updateUser : addUser} />
+        </div>
+        <div className="user-list-container">
+          <UserList users={users} onEdit={handleEdit} onDelete={handleDelete} />
+        </div>
+      </div>
     </div>
   );
+  
 }
 
 export default App;
