@@ -58,7 +58,7 @@ function App() {
       <UserForm user={editingUser} onSubmit={editingUser ? updateUser : addUser} />
       <h2>Users List</h2>
       <ul>
-        {users.map(user => (
+        {users && users.map(user => (
           <li key={user.id}>
             {user.name} ({user.email})
             <button onClick={() => handleEdit(user)}>Edit</button>
